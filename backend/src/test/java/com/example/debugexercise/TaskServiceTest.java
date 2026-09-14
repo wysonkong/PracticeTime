@@ -34,13 +34,7 @@ class TaskServiceTest {
 
         Summary summary = taskService.getSummary(tasks);
 
-        // If this fails, the failure message itself is a big hint: note what
-        // value actually came back vs. what was expected, then set a
-        // breakpoint inside getSummary()'s loop (see README "Attaching the
-        // backend debugger") and step through — watch completedCount on each
-        // iteration rather than only reading the code.
-        assertEquals(3, summary.getCompletedCount(),
-                "expected all 3 completed tasks to be counted, not just the first one");
+        assertEquals(3, summary.getCompletedCount());
     }
 
     @Test
